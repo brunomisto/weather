@@ -1,11 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <form id="fetch-location">
+      <input type="search" id="location" placeholder="Type your city here..." />
+      <button type="submit">Search</button>
+    </form>
+    <div id="city-card">
+      <p id="condition"></p>
+      <h1 id="name"></h1>
+      <h2 id="region"></h2>
+      <h2 id="country"></h2>
+      <time id="time"></time>
+      <span id="temperature"></span>
+      <span id="windspeed"></span>
+      <spand id="humidity"></spand>
+    </div>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
