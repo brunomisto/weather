@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+:root {
+    --dark-blue: #0b2545;
+    --light-gray: #eef4ed;
+    --gray: #dee2e6;
+    --orange: rgba(251,171,126,1);
+    --light-orange: rgba(247,206,104,1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+body {
+    background: linear-gradient(180deg, var(--orange) 0%, var(--light-orange) 100%);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#fetch-location {
+    margin-top: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+
+#location, #submit {
+    border: 0;
+    padding: .5rem;
+    border-radius: 1rem;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+#submit:hover {
+    background-color: var(--gray);
+}
+
+#location, #submit, #city-card {
+    box-shadow: 2px 2px 5px var(--dark-blue);
+}
+
+#city-card {
+    display: none;
+    border-radius: 1rem;
+    padding: 2rem;
+    background-color: var(--light-gray);
+}
+
+#city-card.active {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+#condition {
+    font-size: 1.5rem;
+}
+
+#location-info {
+    margin-bottom: .5rem;
+}

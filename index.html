@@ -4,21 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <form id="fetch-location">
       <input type="search" id="location" placeholder="Type your city here..." />
-      <button type="submit">Search</button>
+      <button type="submit" id="submit">Search</button>
     </form>
     <div id="city-card">
       <p id="condition"></p>
-      <h1 id="name"></h1>
-      <h2 id="region"></h2>
-      <h2 id="country"></h2>
-      <time id="time"></time>
-      <span id="temperature"></span>
-      <span id="windspeed"></span>
-      <spand id="humidity"></spand>
+      <div id="location-info">
+        <h1 id="name"></h1>
+        <h2 id="region"></h2>
+        <h2 id="country"></h2>
+      </div>
+      <p>
+        Local time:
+        <time id="time"></time>
+      </p>
+      <p>
+        Temperature:
+        <span id="temperature"></span> <span>°C</span>
+      </p>
+      <p>
+        Wind speed:
+        <span id="windspeed"></span> <span>km/h</span>
+      </p>
+      <p>
+        Humidity:
+        <spand id="humidity"></spand><span>%</span>
+      </p>
     </div>
     <script src="main.js"></script>
   </body>
