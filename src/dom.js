@@ -12,7 +12,10 @@ export default class DOMManipulator {
     temperatureElement,
     windSpeedElement,
     humidityElement,
-    cityCardElement
+    cityCardElement,
+    dialogElement,
+    dialogContent,
+    dialogCloseButton,
   ) {
     this.form = form;
     this.locationInput = locationInput;
@@ -25,6 +28,9 @@ export default class DOMManipulator {
     this.windSpeedElement = windSpeedElement;
     this.humidityElement = humidityElement;
     this.cityCardElement = cityCardElement;
+    this.dialogElement = dialogElement;
+    this.dialogContent = dialogContent;
+    this.dialogCloseButton = dialogCloseButton;
   }
 
   init() {
@@ -34,15 +40,24 @@ export default class DOMManipulator {
       this.displayCity(city);
       this.locationInput.value = "";
     });
+
+    this.dialogCloseButton.addEventListener("click", () => {
+      this.dialogContent.innerHTML = "";
+      this.dialogElement.close();
+    });
   }
 
-  static displayAlert() {
-    // TODO
+  displayAlert(message) {
+    this.dialogContent.innerHTML = "";
+    const messageElement = document.createElement("p");
+    messageElement.innerText = message;
+    this.dialogContent.appendChild(messageElement);
+    this.dialogElement.showModal();
   }
 
   displayCity(city) {
     if (!city) {
-      DOMManipulator.displayAlert("City not found");
+      this.displayAlert("City not found");
       return;
     }
     this.cityCardElement.classList.add("active");

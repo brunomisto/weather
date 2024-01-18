@@ -11,7 +11,10 @@ const domManipulator = new DOMManipulator(
   document.getElementById('temperature'),
   document.getElementById('windspeed'),
   document.getElementById('humidity'),
-  document.getElementById('city-card')
+  document.getElementById('city-card'),
+  document.getElementById("dialog"),
+  document.getElementById("dialog-content"),
+  document.getElementById("dialog-close")
 );
 
 domManipulator.init();
