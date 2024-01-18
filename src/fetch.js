@@ -1,6 +1,6 @@
 import City from "./City";
 
-const apiUrl = "http://api.weatherapi.com/v1/current.json";
+const apiUrl = "https://api.weatherapi.com/v1/current.json";
 const apiKey = "2b31a30d19cf497996c202820241701";
 
 export default async function getCurrentWeather(locationQuery = "London") {
