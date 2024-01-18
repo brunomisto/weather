@@ -6,7 +6,7 @@ export default class City {
     time,
     temperature,
     condition,
-    windSpeed,
+    wind,
     humidity,
   ) {
     this.name = name;
@@ -15,7 +15,7 @@ export default class City {
     this.time = time;
     this.temperature = temperature;
     this.condition = condition;
-    this.windSpeed = windSpeed;
+    this.wind = wind;
     this.humidity = humidity;
   }
 }

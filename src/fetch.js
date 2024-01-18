@@ -16,9 +16,16 @@ export default async function getCurrentWeather(locationQuery = "London") {
       location.region,
       location.country,
       location.localtime,
-      current.temp_c,
+      {
+        celsius: current.temp_c,
+        fahrenheit: current.temp_f,
+      },
       current.condition.text,
-      current.wind_kph,
+      {
+        kilometer: current.wind_kph,
+        mile: current.wind_mph,
+        direction: current.wind_dir
+      },
       current.humidity,
     );
   } catch (error) {

@@ -10,7 +10,8 @@ const domManipulator = new DOMManipulator(
   document.getElementById('time'),
   document.getElementById('temperature'),
   document.getElementById('windspeed'),
-  document.getElementById('humidity')
+  document.getElementById('humidity'),
+  document.getElementById('city-card')
 );
 
 domManipulator.init();

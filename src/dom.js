@@ -12,6 +12,7 @@ export default class DOMManipulator {
     temperatureElement,
     windSpeedElement,
     humidityElement,
+    cityCardElement
   ) {
     this.form = form;
     this.locationInput = locationInput;
@@ -23,6 +24,7 @@ export default class DOMManipulator {
     this.temperatureElement = temperatureElement;
     this.windSpeedElement = windSpeedElement;
     this.humidityElement = humidityElement;
+    this.cityCardElement = cityCardElement;
   }
 
   init() {
@@ -43,13 +45,14 @@ export default class DOMManipulator {
       DOMManipulator.displayAlert("City not found");
       return;
     }
+    this.cityCardElement.classList.add("active");
     this.nameElement.innerText = city.name;
     this.conditionElement.innerText = city.condition;
     this.regionElement.innerText = city.region;
     this.countryElement.innerText = city.country;
     this.timeElement.innerText = city.time;
-    this.temperatureElement.innerText = city.temperature;
-    this.windSpeedElement.innerText = city.windSpeed;
+    this.temperatureElement.innerText = city.temperature.celsius;
+    this.windSpeedElement.innerText = city.wind.kilometer;
     this.humidityElement.innerText = city.humidity;
   }
 }
